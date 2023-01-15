@@ -1,7 +1,6 @@
 ```bash
 sudo apt update && sudo apt update
 
-
 sudo apt install git gnome-tweaks curl wget build-essential clang nodejs npm ripgrep fzf stow gh xclip podman
 
 # gnome tweak keyboard
@@ -39,11 +38,9 @@ nvim
 echo 'alias vim="nvim"' >> ~/.bashrc
 source ~/.bashrc
 
-
 # slack
 wget https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb
 sudo apt install ./slack-desktop-4.29.149-amd64.deb
-
 
 # brave
 sudo apt install curl
