@@ -62,4 +62,11 @@ rustup target add aarch64-unknown-linux-gnu
 snap install zig --classic --beta
 cargo install cargo-lambda
 
+# insomnia
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+sudo apt-get update
+sudo apt-get install insomnia
+
 ```
