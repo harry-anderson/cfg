@@ -42,6 +42,10 @@ source ~/.bashrc
 wget https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb
 sudo apt install ./slack-desktop-4.29.149-amd64.deb
 
+# discord
+wget https://dl-ptb.discordapp.net/apps/linux/0.0.38/discord-ptb-0.0.38.deb
+sudo apt install ./discord-ptb-0.0.38.deb
+
 # brave
 sudo apt install curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
