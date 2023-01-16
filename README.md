@@ -8,6 +8,11 @@ gnome-tweaks
 
 # Keyboard > Capslock > Additional Esc
 
+# git
+gh login auth
+git config --global user.email "14777088+hrryndrsn@users.noreply.github.com"
+git config --global user.name "Harry Anderson"
+
 # tmux
 sudo apt install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
