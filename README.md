@@ -1,7 +1,16 @@
 ```bash
 sudo apt update && sudo apt update
 
-sudo apt install git gnome-tweaks curl wget build-essential clang nodejs npm ripgrep stow gh xclip xsel podman pkg-config
+sudo apt update && \
+    sudo apt upgrade -y && \
+    sudo apt install -y git gnome-tweaks curl wget build-essential clang nodejs npm && \
+    sudo apt install -y unzip ripgrep stow gh xclip podman pkg-config && \
+    sudo apt install -y golang ccache htop dconf-editor moreutils wireshark
+    sudo apt clean autoclean
+    sudo apt autoremove --yes
+
+
+
 
 # gnome tweak keyboard
 gnome-tweaks
