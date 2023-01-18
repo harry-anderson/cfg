@@ -4,13 +4,10 @@ sudo apt update && sudo apt update
 sudo apt update && \
     sudo apt upgrade -y && \
     sudo apt install -y git gnome-tweaks curl wget build-essential clang nodejs npm && \
-    sudo apt install -y unzip ripgrep stow gh xclip podman pkg-config && \
-    sudo apt install -y golang ccache htop dconf-editor moreutils wireshark
+    sudo apt install -y unzip ripgrep stow gh xclip podman pkg-config goland && \
+    sudo apt install -y ccache htop dconf-editor moreutils wireshark
     sudo apt clean autoclean
     sudo apt autoremove --yes
-
-
-
 
 # gnome tweak keyboard
 gnome-tweaks
