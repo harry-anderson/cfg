@@ -1,7 +1,7 @@
 ```bash
 sudo apt update && sudo apt update
 
-sudo apt install git gnome-tweaks curl wget build-essential clang nodejs npm ripgrep fzf stow gh xclip podman
+sudo apt install git gnome-tweaks curl wget build-essential clang nodejs npm ripgrep stow gh xclip xsel podman pkg-config
 
 # gnome tweak keyboard
 gnome-tweaks
@@ -13,13 +13,9 @@ gh login auth
 git config --global user.email "14777088+hrryndrsn@users.noreply.github.com"
 git config --global user.name "Harry Anderson"
 
-# tmux
-sudo apt install tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Install plugin manager:
-tmux
-# C-b + I
+#fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # kitty
 sudo apt install kitty
@@ -34,13 +30,14 @@ git clone https://github.com/hrryndrsn/cfg.git ~/cfg
 cd cfg
 stow nvim
 stow kitty
-stow tmux
 
 # open nvim and let packer run
 nvim
 
 # add vim alias
 echo 'alias vim="nvim"' >> ~/.bashrc
+# enabled bash vi mode
+echo 'set -o vi"' >> ~/.bashrc
 source ~/.bashrc
 
 # slack
