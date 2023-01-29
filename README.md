@@ -4,9 +4,9 @@ sudo apt update && sudo apt update
 sudo apt update && \
     sudo apt upgrade -y && \
     sudo apt install -y git gnome-tweaks curl wget build-essential clang nodejs npm && \
-    sudo apt install -y unzip ripgrep stow gh xclip podman pkg-config goland && \
-    sudo apt install -y ccache htop dconf-editor moreutils wireshark
-    sudo apt clean autoclean
+    sudo apt install -y unzip ripgrep stow gh xclip podman pkg-config golang && \
+    sudo apt install -y ccache htop dconf-editor moreutils wireshark feh && \
+    sudo apt clean autoclean && \
     sudo apt autoremove --yes
 
 # gnome tweak keyboard
@@ -72,7 +72,7 @@ rustup target add aarch64-unknown-linux-gnu
 
 # cargo lambda
 snap install zig --classic --beta
-cargo install cargo-lambda
+cargo install cargo-expand cargo-lambda cargo-watch
 
 # insomnia
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
@@ -103,7 +103,7 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-# test tocker
+# test docker
 sudo docker run hello-world
 
 # add docker non-root
@@ -111,6 +111,22 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world
+
+# aws cli
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+rm -rf aws awscliv2.zip
+```
+
+# sam cli
+
+wget https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
+unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
+sudo ./sam-installation/install
+sam --version
+rm -rf aws-sam-cli-linux-x86_64.zip  sam-installation
 
 ```
 
