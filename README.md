@@ -19,6 +19,9 @@ gh login auth
 git config --global user.email "14777088+hrryndrsn@users.noreply.github.com"
 git config --global user.name "Harry Anderson"
 
+# npm things
+sudo npm install yarn @aws-amplify/cli
+
 #fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -83,6 +86,7 @@ sudo apt-get install insomnia
 
 # docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
+
 # prereqs
 sudo apt-get update
 sudo apt-get install \
@@ -92,7 +96,7 @@ sudo apt-get install \
     lsb-release
 
 # add gpg key
-sudo mkdir -p /etc/apt/keyrings
+sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 # setup repository
