@@ -3,7 +3,7 @@ sudo apt update && sudo apt update
 
 sudo apt update && \
     sudo apt upgrade -y && \
-    sudo apt install -y git gnome-tweaks curl wget build-essential clang nodejs npm && \
+    sudo apt install -y git gnome-tweaks curl wget build-essential clang && \
     sudo apt install -y unzip ripgrep stow gh xclip podman pkg-config golang && \
     sudo apt install -y ccache htop dconf-editor moreutils wireshark feh && \
     sudo apt clean autoclean && \
@@ -19,8 +19,19 @@ gh login auth
 git config --global user.email "14777088+hrryndrsn@users.noreply.github.com"
 git config --global user.name "Harry Anderson"
 
+# node installer https://github.com/Schniz/fnm
+curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
+
+fnm install 18
+fnm use 18
+
 # npm things
-sudo npm install yarn @aws-amplify/cli
+# sudo npm install yarn @aws-amplify/cli
+
+# pnpm
+wget -qO- https://get.pnpm.io/install.sh | sh -
+
 
 #fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
