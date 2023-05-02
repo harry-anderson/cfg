@@ -61,21 +61,24 @@ vim.opt.laststatus = 3
 -- Colorscheme
 -- https://github.com/projekt0n/github-nvim-theme
 require("github-theme").setup({
-  theme_style = "dark_colorblind",
-  colors = { syntax = { variable = "#c9d1d9"} },
+  specs = { 
+    all = { 
+      syntax = { variable = "#c9d1d9"} 
+    }
+  },
 
-  -- Overwrite the highlight groups
-  overrides = function(c)
-    return {
+  groups = {
+    all = {
+
       StatusLine = {link = "Comment"},
       TSSymbol = {link = "Normal"},
       Search = {link = "TSNote"},
-      -- this will remove the highlight groups
-      -- TSField = {},
     }
-  end
+  }
 })
-vim.cmd [[colorscheme github_dark_colorblind]]
+-- vim.cmd [[colorscheme github_dark_colorblind]]
+vim.cmd.colorscheme('github_dark_colorblind')
+
 
 
 
