@@ -90,3 +90,6 @@ vim.keymap.set('n', '<Leader>lp', '<Cmd>lua require("dap").set_breakpoint(nil, n
 vim.keymap.set('n', '<Leader>dr', '<Cmd>lua require("dap").repl.open()<CR>', opts)
 vim.keymap.set('n', '<Leader>dl', '<Cmd>lua require("dap").run_last()<CR>', opts)
 vim.keymap.set('n', '<Leader>dc', '<Cmd>lua require("dapui").close()<CR>', opts)
+
+--unbinds
+vim.keymap.set('n', 'b', '<Nop>', opts)
