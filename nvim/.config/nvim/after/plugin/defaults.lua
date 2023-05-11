@@ -64,7 +64,7 @@ require("github-theme").setup({
   specs = {
     all = {
       diag = {
-        error = '#ff0000',
+        error = 'red',
         hint = 'orange',
       },
     }
@@ -72,9 +72,9 @@ require("github-theme").setup({
 
   groups = {
     all = {
-      StatusLine = {link = "Comment"},
-      Search = {link = "TSNote"},
-      TSField = {}
+      -- StatusLine = {link = "Comment"},
+      -- Search = {link = "TSNote"},
+      -- TSField = {}
     }
   }
 })
