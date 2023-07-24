@@ -92,4 +92,4 @@ vim.keymap.set('n', '<Leader>dl', '<Cmd>lua require("dap").run_last()<CR>', opts
 vim.keymap.set('n', '<Leader>dc', '<Cmd>lua require("dapui").close()<CR>', opts)
 
 --unbinds
-vim.keymap.set('n', 'b', '<Nop>', opts)
+-- vim.keymap.set('n', 'b', '<Nop>', opts)
