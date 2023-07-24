@@ -10,6 +10,15 @@ end
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
+  use {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+    config = function()
+      require("fidget").setup {
+        -- options
+      }
+      end,
+  }
 
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -248,6 +257,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'yaml', 'bash' },
+  ignore_install = { "help" },
 
   highlight = { enable = true },
   -- indent = { enable = true },
@@ -372,7 +382,6 @@ local servers = {
   'pyright',
   'tsserver',
   'lua_ls',
-  'gopls',
   'yamlls',
   'html',
   'bashls',
