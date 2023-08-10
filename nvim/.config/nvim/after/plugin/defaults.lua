@@ -123,6 +123,7 @@ require('telescope').setup{
 -- require('telescope').load_extension('dap')
 
 -- Emmet
+-- C-y + ,
 vim.g.user_emmet_mode = 'n'
 vim.g.user_emmet_leader_key = ','
 vim.g.user_emmet_settings = {
