@@ -375,6 +375,7 @@ end
 require('mason').setup()
 
 -- Enable the following language servers
+-- See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
 local servers = {
   'clangd',
@@ -583,3 +584,10 @@ require('lspconfig').eslint.setup({
     })
   end,
 })
+
+-- Swift sourcekit-lsp
+require'lspconfig'.sourcekit.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+  cmd = {'/usr/bin/sourcekit-lsp'}
+}
