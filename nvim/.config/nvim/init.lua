@@ -586,6 +586,8 @@ require('lspconfig').eslint.setup({
 })
 
 -- Swift sourcekit-lsp
+-- https://github.com/apple/sourcekit-lsp
+-- requires sourcekit-lsp bin to be installed
 require'lspconfig'.sourcekit.setup{
     on_attach = on_attach,
     capabilities = capabilities,
