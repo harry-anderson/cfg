@@ -72,9 +72,9 @@ require("github-theme").setup({
 
   groups = {
     all = {
-      -- StatusLine = {link = "Comment"},
-      -- Search = {link = "TSNote"},
-      -- TSField = {}
+      StatusLine = {link = "Comment"},
+      Search = {link = "TSNote"},
+      TSField = {}
     }
   }
 })
